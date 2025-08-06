@@ -1,4 +1,4 @@
-import { Mark, mergeAttributes } from '@tiptap/core'
+import { Mark, mergeAttributes } from '@tiptap/core';
 
 export const TitleMark = Mark.create({
   name: 'title',
@@ -6,7 +6,7 @@ export const TitleMark = Mark.create({
   addOptions() {
     return {
       HTMLAttributes: {},
-    }
+    };
   },
 
   addAttributes() {
@@ -16,14 +16,14 @@ export const TitleMark = Mark.create({
         parseHTML: element => element.getAttribute('data-title'),
         renderHTML: attributes => {
           if (!attributes.title) {
-            return {}
+            return {};
           }
           return {
             'data-title': attributes.title,
-          }
+          };
         },
       },
-    }
+    };
   },
 
   parseHTML() {
@@ -31,24 +31,34 @@ export const TitleMark = Mark.create({
       {
         tag: 'span[data-title]',
       },
-    ]
+    ];
   },
 
   renderHTML({ HTMLAttributes }) {
-    return ['span', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes), 0]
+    return [
+      'span',
+      mergeAttributes(this.options.HTMLAttributes, HTMLAttributes),
+      0,
+    ];
   },
 
   addCommands() {
     return {
-      setTitle: attributes => ({ commands }) => {
-        return commands.setMark(this.name, attributes)
-      },
-      toggleTitle: attributes => ({ commands }) => {
-        return commands.toggleMark(this.name, attributes)
-      },
-      unsetTitle: () => ({ commands }) => {
-        return commands.unsetMark(this.name)
-      },
-    }
+      setTitle:
+        attributes =>
+        ({ commands }) => {
+          return commands.setMark(this.name, attributes);
+        },
+      toggleTitle:
+        attributes =>
+        ({ commands }) => {
+          return commands.toggleMark(this.name, attributes);
+        },
+      unsetTitle:
+        () =>
+        ({ commands }) => {
+          return commands.unsetMark(this.name);
+        },
+    };
   },
-}) 
+});

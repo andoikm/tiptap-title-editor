@@ -1,6 +1,6 @@
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
 import { TitleMark } from '../extensions/TitleMark';
 
@@ -8,7 +8,6 @@ import TitleButton from './TitleButton';
 import { useTooltipPlugin } from './TooltipPlugin';
 
 const TiptapEditor = () => {
-  const [state, setState] = useState(null);
   const editor = useEditor({
     extensions: [StarterKit, TitleMark],
     content:
@@ -21,7 +20,7 @@ const TiptapEditor = () => {
     },
     onUpdate: ({ editor }) => {
       const content = editor.getHTML();
-      setState(content);
+      // eslint-disable-next-line no-console
       console.log('Content changed:', content);
     },
   });
