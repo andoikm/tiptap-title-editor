@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Add `tippy.js` dependency to support tooltips and popper functionality in the application" />
+    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="aAdd a standard `.gitignore` file to exclude unnecessary files and directories">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,35 +21,35 @@
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="30vcsce9eBfor94oRhh97KMSdph" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/andranikminasyan/Projects/test/tiptap-title-editor",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev (1).executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.lint:fix.executor": "Run",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/andranikminasyan/Projects/test/tiptap-title-editor/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/andranikminasyan/Projects/test/tiptap-title-editor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/andranikminasyan/Projects/test/tiptap-title-editor/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -125,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754511694877</updated>
-      <workItem from="1754511696154" duration="9792000" />
+      <workItem from="1754511696154" duration="10077000" />
     </task>
     <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
       <option name="closed" value="true" />
@@ -191,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754523153480</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="aAdd a standard `.gitignore` file to exclude unnecessary files and directories">
+      <option name="closed" value="true" />
+      <created>1754523257544</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523257544</updated>
+    </task>
+    <task id="LOCAL-00010" summary="aAdd a standard `.gitignore` file to exclude unnecessary files and directories">
+      <option name="closed" value="true" />
+      <created>1754523260913</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523260913</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +224,7 @@
     <MESSAGE value="Add components and documentation for rendering saved HTML with TitleMark functionality" />
     <MESSAGE value="Add source mapping files and TypeScript declaration files for @jridgewell/sourcemap-codec" />
     <MESSAGE value="Add `tippy.js` dependency to support tooltips and popper functionality in the application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `tippy.js` dependency to support tooltips and popper functionality in the application" />
+    <MESSAGE value="aAdd a standard `.gitignore` file to exclude unnecessary files and directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="aAdd a standard `.gitignore` file to exclude unnecessary files and directories" />
   </component>
 </project>
