@@ -3,6 +3,12 @@
 A Tiptap extension that adds title/tooltip functionality to text selections. This plugin allows users to add custom
 titles to selected text, which are displayed as tooltips on hover.
 
+## 🚀 Live Demo
+
+**[Try the live demo →](https://andoikm.github.io/tiptap-title-editor/)**
+
+Select text in the editor below and add custom titles that appear as tooltips on hover!
+
 ## Features
 
 - ✅ Add titles to selected text in Tiptap editor
