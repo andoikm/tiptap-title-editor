@@ -1,7 +1,8 @@
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import { useState, useEffect, useRef } from 'react';
-import { TitleMark, TooltipManager } from '../../src/index';
+import { TitleMark } from '../../src/index';
+import { TooltipManager } from './components/TooltipManager';
 import TitleButton from './components/TitleButton';
 
 function App() {
