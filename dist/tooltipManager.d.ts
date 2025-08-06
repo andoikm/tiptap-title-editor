@@ -31,7 +31,7 @@ export declare class TooltipManager {
     /**
      * Create a tooltip for a specific element
      */
-    static createTooltip(element: Element, content: string, options?: TooltipOptions): any;
+    static createTooltip(element: Element, content: string, options?: TooltipOptions): import("tippy.js").Instance<import("tippy.js").Props>;
     /**
      * Subscribe to DOM changes and automatically update tooltips
      */
