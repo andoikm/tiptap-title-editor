@@ -1,43 +1,49 @@
 {
-  "name": "tiptap-title-editor",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tiptap-titlemark-plugin",
+  "version": "1.0.0",
+  "description": "A Tiptap extension that adds title/tooltip functionality to text selections",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "preview": "vite preview"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build"
   },
-  "dependencies": {
-    "@tiptap/core": "^3.0.9",
-    "@tiptap/pm": "^3.0.9",
-    "@tiptap/react": "^3.0.9",
-    "@tiptap/starter-kit": "^3.0.9",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tippy.js": "^6.3.7"
+  "keywords": [
+    "tiptap",
+    "tiptap-extension",
+    "tiptap-plugin",
+    "title",
+    "tooltip",
+    "mark",
+    "rich-text-editor"
+  ],
+  "author": "Andranik Minasyan",
+  "license": "MIT",
+  "peerDependencies": {
+    "@tiptap/core": "^2.0.0 || ^3.0.0",
+    "tippy.js": "^6.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.1",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "@vitejs/plugin-react": "^4.6.0",
-    "eslint": "^9.30.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.5.4",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "prettier": "^3.6.2",
-    "vite": "^7.0.4"
-  }
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^4.0.0",
+    "typescript": "^5.0.0",
+    "tslib": "^2.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andoikm/tiptap-title-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andoikm/tiptap-title-editor/issues"
+  },
+  "homepage": "https://github.com/andoikm/tiptap-title-editor#readme"
 }

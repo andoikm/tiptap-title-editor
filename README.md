@@ -1,108 +1,288 @@
-# Tiptap Title Editor
+# Tiptap TitleMark Plugin
 
-A React-based rich text editor using Tiptap with a custom title feature.
+A Tiptap extension that adds title/tooltip functionality to text selections. This plugin allows users to add custom
+titles to selected text, which are displayed as tooltips on hover.
 
 ## Features
 
-- Rich text editing with Tiptap
-- Custom title mark extension
-- Tooltip functionality
-- Modern React with hooks
+- ✅ Add titles to selected text in Tiptap editor
+- ✅ Tooltip display on hover using tippy.js
+- ✅ TypeScript support with full type definitions
+- ✅ Compatible with Tiptap v2 and v3
+- ✅ Lightweight and performant
+- ✅ Easy to integrate and customize
+- ✅ **NEW**: TooltipManager utility - No useEffect required!
 
-## Development Setup
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
+## Installation
 
 ```bash
+npm install tiptap-titlemark-plugin
+```
+
+## Basic Usage
+
+```javascript
+import {EditorContent, useEditor} from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import {TitleMark, TooltipManager} from 'tiptap-titlemark-plugin';
+
+const MyEditor = () => {
+    const editor = useEditor({
+        extensions: [StarterKit, TitleMark],
+        content: '<p>Select some text and add a title!</p>',
+        onUpdate: ({editor}) => {
+            // Update tooltips when content changes - No useEffect needed!
+            if (editor && editor.view.dom) {
+                TooltipManager.updateAllTooltips(editor.view.dom);
+            }
+        },
+    });
+
+    return <EditorContent editor={editor}/>;
+};
+```
+
+## TooltipManager Utility
+
+The `TooltipManager` provides a clean way to handle tooltips without useEffect:
+
+### Basic Usage
+
+```javascript
+import {TooltipManager} from 'tiptap-titlemark-plugin';
+
+// Initialize tooltips for a container
+TooltipManager.initTooltips(containerElement);
+
+// Subscribe to automatic tooltip updates (recommended)
+TooltipManager.subscribe('[data-rendered-html]');
+
+// Update tooltips for editor and rendered HTML sections
+TooltipManager.updateAllTooltips(editorElement);
+
+// Cleanup tooltips
+TooltipManager.cleanupAll();
+```
+
+### Advanced Usage
+
+```javascript
+import {TooltipManager, TooltipOptions} from 'tiptap-titlemark-plugin';
+
+const options: TooltipOptions = {
+    placement: 'top',
+    arrow: true,
+    theme: 'light-border',
+    animation: 'scale',
+    duration: [200, 150],
+    interactive: true,
+    zIndex: 9999,
+    trigger: 'mouseenter',
+    hideOnClick: false,
+};
+
+// Initialize with custom options
+TooltipManager.initTooltips(container, options);
+
+// Create a tooltip for a specific element
+TooltipManager.createTooltip(element, 'Custom tooltip text', options);
+```
+
+## API Reference
+
+### TitleMark Extension
+
+The `TitleMark` extension provides the following commands:
+
+#### `setTitle(attributes)`
+
+Adds a title to the currently selected text.
+
+```javascript
+editor.chain().focus().setTitle({title: 'Your tooltip text'}).run();
+```
+
+#### `toggleTitle(attributes)`
+
+Toggles a title on the currently selected text.
+
+```javascript
+editor.chain().focus().toggleTitle({title: 'Your tooltip text'}).run();
+```
+
+#### `unsetTitle()`
+
+Removes the title from the currently selected text.
+
+```javascript
+editor.chain().focus().unsetTitle().run();
+```
+
+### TooltipManager Class
+
+#### `initTooltips(container, options?)`
+
+Initialize tooltips for all `[data-title]` elements in a container.
+
+#### `subscribe(target, options?)`
+
+Subscribe to DOM changes and automatically update tooltips. Returns an unsubscribe function.
+
+```javascript
+// Subscribe to a selector
+const unsubscribe = TooltipManager.subscribe('[data-rendered-html]');
+
+// Subscribe to an element
+const unsubscribe = TooltipManager.subscribe(elementRef);
+
+// Cleanup
+unsubscribe();
+```
+
+#### `unsubscribe(target)`
+
+Unsubscribe from DOM changes for a specific element.
+
+#### `unsubscribeAll()`
+
+Unsubscribe from all DOM changes.
+
+#### `updateAllTooltips(editorElement, renderedSelector?, options?)`
+
+Update tooltips for both editor and rendered HTML sections.
+
+#### `cleanupTooltips(container)`
+
+Remove all tooltips from a specific container.
+
+#### `cleanupAll()`
+
+Remove all tooltips from the entire application.
+
+#### `createTooltip(element, content, options?)`
+
+Create a tooltip for a specific element.
+
+### Options
+
+The `TitleMark` extension accepts the following options:
+
+```javascript
+import {TitleMark} from 'tiptap-titlemark-plugin';
+
+const TitleMarkWithOptions = TitleMark.configure({
+    HTMLAttributes: {
+        class: 'my-custom-title-class',
+    },
+});
+```
+
+## Complete Example
+
+Here's a complete example showing how to use the TitleMark plugin with TooltipManager:
+
+```jsx
+import {EditorContent, useEditor} from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import {useState} from 'react';
+import {TitleMark, TooltipManager} from 'tiptap-titlemark-plugin';
+
+const TitleButton = ({editor}) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [titleText, setTitleText] = useState('');
+
+    const handleAddTitle = () => {
+        if (!editor || !titleText.trim()) return;
+
+        const {from, to} = editor.state.selection;
+        if (from === to) {
+            alert('Please select some text first!');
+            return;
+        }
+
+        editor.chain().focus().setTitle({title: titleText.trim()}).run();
+        setTitleText('');
+        setIsModalOpen(false);
+    };
+
+    return (
+        <>
+            <button onClick={() => setIsModalOpen(true)}>
+                Add Title
+            </button>
+
+            {isModalOpen && (
+                <div className="modal">
+                    <input
+                        type="text"
+                        value={titleText}
+                        onChange={(e) => setTitleText(e.target.value)}
+                        placeholder="Enter title..."
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                handleAddTitle();
+                            }
+                        }}
+                    />
+                    <button onClick={handleAddTitle}>Add</button>
+                    <button onClick={() => setIsModalOpen(false)}>Cancel</button>
+                </div>
+            )}
+        </>
+    );
+};
+
+const MyEditor = () => {
+    const editor = useEditor({
+        extensions: [StarterKit, TitleMark],
+        content: '<p>Select some text and try the Title feature!</p>',
+        onUpdate: ({editor}) => {
+            // Update tooltips when content changes - No useEffect needed!
+            if (editor && editor.view.dom) {
+                TooltipManager.updateAllTooltips(editor.view.dom);
+            }
+        },
+    });
+
+    if (!editor) return null;
+
+    return (
+        <div>
+            <TitleButton editor={editor}/>
+            <EditorContent editor={editor}/>
+        </div>
+    );
+};
+```
+
+## HTML Output
+
+The TitleMark extension generates HTML with `data-title` attributes:
+
+```html
+<span data-title="Your tooltip text">Highlighted text</span>
+```
+
+## Demo
+
+To see the plugin in action, run the demo:
+
+```bash
+cd demo
 npm install
+npm run dev
 ```
 
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Run ESLint with auto-fix
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-
-## Code Quality Configuration
-
-This project uses a comprehensive setup for code quality and formatting:
-
-### ESLint Configuration
-
-The project uses ESLint with the following features:
-
-- **React-specific rules**: Enforces React best practices and hooks rules
-- **Accessibility rules**: Ensures JSX elements follow accessibility guidelines
-- **Import organization**: Automatically sorts and organizes imports
-- **Code quality rules**: Prevents common JavaScript errors and enforces best practices
-- **Prettier integration**: Works seamlessly with Prettier for consistent formatting
-
-### Prettier Configuration
-
-Prettier is configured with the following settings:
-
-- **Single quotes**: Uses single quotes for strings
-- **Semicolons**: Adds semicolons where needed
-- **Trailing commas**: Adds trailing commas in objects and arrays
-- **80 character line width**: Wraps lines at 80 characters
-- **2 space indentation**: Uses 2 spaces for indentation
-- **JSX formatting**: Properly formats JSX elements
-
-### VS Code Integration
-
-The project includes VS Code configuration for optimal development experience:
-
-- **Auto-formatting**: Code is automatically formatted on save
-- **ESLint integration**: ESLint errors are shown in the editor
-- **Recommended extensions**: Suggests useful extensions for development
-
-### Configuration Files
-
-- `.prettierrc` - Prettier configuration
-- `.prettierignore` - Files to ignore during formatting
-- `eslint.config.js` - ESLint configuration
-- `.vscode/settings.json` - VS Code settings
-- `.vscode/extensions.json` - Recommended VS Code extensions
-
-### Best Practices
-
-1. **Run linting before commits**: Use `npm run lint` to check for issues
-2. **Auto-fix when possible**: Use `npm run lint:fix` to automatically fix issues
-3. **Format code regularly**: Use `npm run format` to maintain consistent formatting
-4. **Check formatting in CI**: Use `npm run format:check` in CI/CD pipelines
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── TiptapEditor.jsx
-│   ├── TitleButton.jsx
-│   └── TooltipPlugin.js
-├── extensions/
-│   └── TitleMark.js
-├── App.jsx
-└── main.jsx
-```
-
-## Usage
-
-1. Start the development server: `npm run dev`
-2. Open your browser to the local development URL
-3. Select text in the editor and use the "Add Title" button to add titles
-4. Use the "Remove Title" button to remove titles from selected text
+Then open your browser to `http://localhost:3000` to see the demo.
 
 ## Contributing
 
-1. Ensure all code passes linting: `npm run lint`
-2. Format code before committing: `npm run format`
-3. Follow the established code style and conventions
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
