@@ -4,6 +4,7 @@ import { Fragment, useRef, useState } from 'react';
 
 import { TitleMark } from '../extensions/TitleMark';
 
+import StaticHtmlRenderer from './StaticHtmlRenderer';
 import TitleButton from './TitleButton';
 import { useTooltipPlugin } from './TooltipPlugin';
 
@@ -23,17 +24,15 @@ const TiptapEditor = () => {
     },
     onUpdate: ({ editor }) => {
       const content = editor.getHTML();
-
-      //Make a fetch backend save it than get and display in renderHtmlWithTitleMark
       setText(content);
     },
     onTransaction: ({ editor }) => {
       // Get current document size
-      demoRef.current.innerHTML = editor.getHTML();
+      //  demoRef.current.innerHTML = editor.getHTML();
     },
   });
 
-  // Use the tooltip plugin hook
+  // Use the tooltip plugin hook for the editor
   useTooltipPlugin(editor);
 
   if (!editor) {
@@ -47,18 +46,10 @@ const TiptapEditor = () => {
 
         <EditorContent editor={editor} />
 
-        <div
-          id='demo'
-          ref={demoRef}
-          style={{
-            minHeight: '50px',
-            padding: '10px',
-            border: '1px solid #ddd',
-          }}
-        />
-        <div
-          id='renderHtmlWithTitleMark'
-          dangerouslySetInnerHTML={{ __html: text }}
+
+        <StaticHtmlRenderer
+          htmlContent={text}
+          className='prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto'
         />
       </div>
     </Fragment>
