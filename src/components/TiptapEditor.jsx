@@ -1,6 +1,6 @@
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { Fragment, useRef } from 'react';
+import { Fragment, useRef, useState } from 'react';
 
 import { TitleMark } from '../extensions/TitleMark';
 
@@ -9,6 +9,7 @@ import { useTooltipPlugin } from './TooltipPlugin';
 
 const TiptapEditor = () => {
   const demoRef = useRef(null);
+  const [text, setText] = useState(null);
 
   const editor = useEditor({
     extensions: [StarterKit, TitleMark],
@@ -22,9 +23,9 @@ const TiptapEditor = () => {
     },
     onUpdate: ({ editor }) => {
       const content = editor.getHTML();
-      debugger;
-      // eslint-disable-next-line no-console
-      console.log('Content changed:', content);
+
+      //Make a fetch backend save it than get and display in renderHtmlWithTitleMark
+      setText(content);
     },
     onTransaction: ({ editor }) => {
       // Get current document size
@@ -54,6 +55,10 @@ const TiptapEditor = () => {
             padding: '10px',
             border: '1px solid #ddd',
           }}
+        />
+        <div
+          id='renderHtmlWithTitleMark'
+          dangerouslySetInnerHTML={{ __html: text }}
         />
       </div>
     </Fragment>
