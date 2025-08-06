@@ -1,6 +1,6 @@
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { Fragment } from 'react';
+import { Fragment, useRef } from 'react';
 
 import { TitleMark } from '../extensions/TitleMark';
 
@@ -8,6 +8,8 @@ import TitleButton from './TitleButton';
 import { useTooltipPlugin } from './TooltipPlugin';
 
 const TiptapEditor = () => {
+  const demoRef = useRef(null);
+
   const editor = useEditor({
     extensions: [StarterKit, TitleMark],
     content:
@@ -20,8 +22,13 @@ const TiptapEditor = () => {
     },
     onUpdate: ({ editor }) => {
       const content = editor.getHTML();
+      debugger;
       // eslint-disable-next-line no-console
       console.log('Content changed:', content);
+    },
+    onTransaction: ({ editor }) => {
+      // Get current document size
+      demoRef.current.innerHTML = editor.getHTML();
     },
   });
 
@@ -38,6 +45,16 @@ const TiptapEditor = () => {
         <TitleButton editor={editor} />
 
         <EditorContent editor={editor} />
+
+        <div
+          id='demo'
+          ref={demoRef}
+          style={{
+            minHeight: '50px',
+            padding: '10px',
+            border: '1px solid #ddd',
+          }}
+        />
       </div>
     </Fragment>
   );

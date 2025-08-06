@@ -38,11 +38,11 @@ const TitleButton = ({ editor }) => {
           }
           className='title-button'
         >
-          Add Title
+          +
         </button>
         {isTitleActive && (
           <button onClick={handleRemoveTitle} className='title-button remove'>
-            Remove Title
+            -
           </button>
         )}
       </div>
