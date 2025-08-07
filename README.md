@@ -1,5 +1,7 @@
 # Tiptap TitleMark Plugin
 
+> ⚠️ **This package is currently under active development and is not production-ready. Breaking changes may occur at any time.**
+
 A Tiptap extension that adds title/tooltip functionality to text selections. This plugin allows users to add custom
 titles to selected text, which are displayed as tooltips on hover.
 
