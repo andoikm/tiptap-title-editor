@@ -1,7 +1,7 @@
 {
   "name": "tiptap-titlemark-plugin",
   "version": "1.0.2-beta.2",
-  "description": "A Tiptap extension that adds title/tooltip functionality to text selections with bug fixes and improvements. Live demo: https://andoikm.github.io/tiptap-title-editor/",
+  "description": "A Tiptap extension that adds title/tooltip functionality to text selections. 🎯 Live Demo: https://andoikm.github.io/tiptap-title-editor/",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
