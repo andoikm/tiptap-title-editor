@@ -141,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754511694877</updated>
-      <workItem from="1754511696154" duration="11591000" />
+      <workItem from="1754511696154" duration="12256000" />
     </task>
     <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
       <option name="closed" value="true" />

@@ -9,6 +9,8 @@ titles to selected text, which are displayed as tooltips on hover.
 
 Select text in the editor below and add custom titles that appear as tooltips on hover!
 
+> 💡 **Interactive Demo**: Visit the [live demo](https://andoikm.github.io/tiptap-title-editor/) to see this plugin in action with real-time tooltip functionality!
+
 ## Features
 
 - ✅ Add titles to selected text in Tiptap editor
@@ -24,6 +26,8 @@ Select text in the editor below and add custom titles that appear as tooltips on
 ```bash
 npm install tiptap-titlemark-plugin
 ```
+
+> 🎯 **See it in action**: [Live Demo](https://andoikm.github.io/tiptap-title-editor/) | [GitHub Repository](https://github.com/andoikm/tiptap-title-editor)
 
 ## Basic Usage
 
@@ -271,7 +275,11 @@ The TitleMark extension generates HTML with `data-title` attributes:
 
 ## Demo
 
-To see the plugin in action, run the demo:
+### 🌐 Live Demo
+**[Try the live demo →](https://andoikm.github.io/tiptap-title-editor/)**
+
+### 🏃‍♂️ Local Development
+To run the demo locally:
 
 ```bash
 cd demo
