@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="rm node modules">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Add demo deployment script and GitHub Actions workflow">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,9 @@
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -140,7 +143,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754511694877</updated>
-      <workItem from="1754511696154" duration="10374000" />
+      <workItem from="1754511696154" duration="11053000" />
     </task>
     <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
       <option name="closed" value="true" />
@@ -230,7 +233,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754523572872</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="rm node modules">
+      <option name="closed" value="true" />
+      <created>1754523826775</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523826775</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Bump version to `1.0.2-beta.1` and update description to reflect bug fixes and improvements">
+      <option name="closed" value="true" />
+      <created>1754524115690</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1754524115690</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add demo deployment script and GitHub Actions workflow">
+      <option name="closed" value="true" />
+      <created>1754524476826</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1754524476826</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +274,8 @@
     <MESSAGE value="Add `tippy.js` dependency to support tooltips and popper functionality in the application" />
     <MESSAGE value="aAdd a standard `.gitignore` file to exclude unnecessary files and directories" />
     <MESSAGE value="rm node modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="rm node modules" />
+    <MESSAGE value="Bump version to `1.0.2-beta.1` and update description to reflect bug fixes and improvements" />
+    <MESSAGE value="Add demo deployment script and GitHub Actions workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add demo deployment script and GitHub Actions workflow" />
   </component>
 </project>
