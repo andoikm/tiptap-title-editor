@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Add demo deployment script and GitHub Actions workflow">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="30vcsce9eBfor94oRhh97KMSdph" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/andranikminasyan/Projects/test/tiptap-title-editor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prepublishOnly.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/andranikminasyan/Projects/test/tiptap-title-editor/node_modules/typescript/lib&quot;
+  }
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.prepublishOnly">
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/demo/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/demo/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prepublishOnly" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prepublishOnly" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.prepublishOnly" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build (1)" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.27812.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="" />
+      <created>1754511694877</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754511694877</updated>
+      <workItem from="1754511696154" duration="11053000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
+      <option name="closed" value="true" />
+      <created>1754513859267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754513859267</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactor codebase to enforce consistent formatting using ESLint and Prettier">
+      <option name="closed" value="true" />
+      <created>1754514247521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754514247521</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactor codebase to enforce consistent formatting using ESLint and Prettier">
+      <option name="closed" value="true" />
+      <created>1754515311142</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754515311142</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add tooltip updates for dynamic content and display HTML content with TitleMark render">
+      <option name="closed" value="true" />
+      <created>1754515728964</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1754515728964</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add components and documentation for rendering saved HTML with TitleMark functionality">
+      <option name="closed" value="true" />
+      <created>1754516409745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754516409745</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add components and documentation for rendering saved HTML with TitleMark functionality">
+      <option name="closed" value="true" />
+      <created>1754522932646</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1754522932646</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add source mapping files and TypeScript declaration files for @jridgewell/sourcemap-codec">
+      <option name="closed" value="true" />
+      <created>1754522985387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754522985387</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add `tippy.js` dependency to support tooltips and popper functionality in the application">
+      <option name="closed" value="true" />
+      <created>1754523153480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523153480</updated>
+    </task>
+    <task id="LOCAL-00009" summary="aAdd a standard `.gitignore` file to exclude unnecessary files and directories">
+      <option name="closed" value="true" />
+      <created>1754523257544</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523257544</updated>
+    </task>
+    <task id="LOCAL-00010" summary="aAdd a standard `.gitignore` file to exclude unnecessary files and directories">
+      <option name="closed" value="true" />
+      <created>1754523260913</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523260913</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rm node modules">
+      <option name="closed" value="true" />
+      <created>1754523572872</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523572872</updated>
+    </task>
+    <task id="LOCAL-00012" summary="rm node modules">
+      <option name="closed" value="true" />
+      <created>1754523826775</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754523826775</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Bump version to `1.0.2-beta.1` and update description to reflect bug fixes and improvements">
+      <option name="closed" value="true" />
+      <created>1754524115690</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1754524115690</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add demo deployment script and GitHub Actions workflow">
+      <option name="closed" value="true" />
+      <created>1754524476826</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1754524476826</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add eslint configs" />
+    <MESSAGE value="Add eslint and prettier integration for code linting and formatting" />
+    <MESSAGE value="Refactor codebase to enforce consistent formatting using ESLint and Prettier" />
+    <MESSAGE value="Enhance tooltip functionality and support dynamic updates for editor and demo content. Add state to TiptapEditor for rendering HTML updates." />
+    <MESSAGE value="Add tooltip updates for dynamic content and display HTML content with TitleMark render" />
+    <MESSAGE value="Add components and documentation for rendering saved HTML with TitleMark functionality" />
+    <MESSAGE value="Add source mapping files and TypeScript declaration files for @jridgewell/sourcemap-codec" />
+    <MESSAGE value="Add `tippy.js` dependency to support tooltips and popper functionality in the application" />
+    <MESSAGE value="aAdd a standard `.gitignore` file to exclude unnecessary files and directories" />
+    <MESSAGE value="rm node modules" />
+    <MESSAGE value="Bump version to `1.0.2-beta.1` and update description to reflect bug fixes and improvements" />
+    <MESSAGE value="Add demo deployment script and GitHub Actions workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add demo deployment script and GitHub Actions workflow" />
+  </component>
+</project>
