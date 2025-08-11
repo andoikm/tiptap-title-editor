@@ -1,0 +1,68 @@
+/* App Container Styles */
+.app-container {
+  padding: 20px;
+}
+
+.app-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.editor-container {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(36 36 36);
+}
+
+.rendered-html-container {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgb(36 36 36);
+}
+
+.rendered-html-title {
+  margin-top: 0;
+  color: #ffffffde;
+}
+
+/* Toolbar Styles */
+.toolbar {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.toolbar-section-label {
+  font-weight: bold;
+  margin-right: 12px;
+  color: #ffffffde;
+}
+
+.toolbar-section {
+  margin-left: 12px;
+  border-left: 1px solid #cbd5e1;
+  padding-left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.title-button {
+  box-shadow: 0px 0px 5px #00ea23 inset;
+  color: #00ea23;
+}
