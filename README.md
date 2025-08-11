@@ -20,6 +20,8 @@ titles to selected text, which are displayed as tooltips on hover.
 - ✅ Lightweight and performant
 - ✅ Easy to integrate and customize
 - ✅ **NEW**: TooltipManager utility - No useEffect required!
+- ✅ **NEW**: Auto-focus modal input for better UX
+- ✅ **NEW**: Refactored demo with modular components
 
 ## Installation
 
@@ -29,8 +31,7 @@ npm install tiptap-titlemark-plugin
 
 **🎯 [Try the Live Demo →](https://andoikm.github.io/tiptap-title-editor/)**
 
-> 🎯 **See it in action
-**: [Live Demo](https://andoikm.github.io/tiptap-title-editor/) | [GitHub Repository](https://github.com/andoikm/tiptap-title-editor)
+> 🎯 **See it in action**: [Live Demo](https://andoikm.github.io/tiptap-title-editor/) | [GitHub Repository](https://github.com/andoikm/tiptap-title-editor)
 
 ## Basic Usage
 
@@ -131,6 +132,14 @@ Removes the title from the currently selected text.
 editor.chain().focus().unsetTitle().run();
 ```
 
+#### `toggleTitleModal()`
+
+Opens the title modal for the currently selected text. This is the recommended way to add titles as it provides a better user experience.
+
+```javascript
+editor.chain().focus().toggleTitleModal().run();
+```
+
 ### TooltipManager Class
 
 #### `initTooltips(container, options?)`
@@ -201,11 +210,8 @@ import {useState} from 'react';
 import {TitleMark, TooltipManager} from 'tiptap-titlemark-plugin';
 
 const TitleButton = ({editor}) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [titleText, setTitleText] = useState('');
-
     const handleAddTitle = () => {
-        if (!editor || !titleText.trim()) return;
+        if (!editor) return;
 
         const {from, to} = editor.state.selection;
         if (from === to) {
@@ -213,35 +219,14 @@ const TitleButton = ({editor}) => {
             return;
         }
 
-        editor.chain().focus().setTitle({title: titleText.trim()}).run();
-        setTitleText('');
-        setIsModalOpen(false);
+        // Use the built-in modal for better UX
+        editor.chain().focus().toggleTitleModal().run();
     };
 
     return (
-        <>
-            <button onClick={() => setIsModalOpen(true)}>
-                Add Title
-            </button>
-
-            {isModalOpen && (
-                <div className="modal">
-                    <input
-                        type="text"
-                        value={titleText}
-                        onChange={(e) => setTitleText(e.target.value)}
-                        placeholder="Enter title..."
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter') {
-                                handleAddTitle();
-                            }
-                        }}
-                    />
-                    <button onClick={handleAddTitle}>Add</button>
-                    <button onClick={() => setIsModalOpen(false)}>Cancel</button>
-                </div>
-            )}
-        </>
+        <button onClick={handleAddTitle}>
+            Add Title
+        </button>
     );
 };
 
@@ -292,7 +277,32 @@ npm install
 npm run dev
 ```
 
-Then open your browser to `http://localhost:3000` to see the demo.
+Then open your browser to `http://localhost:3001` to see the demo.
+
+### Demo Features
+
+The demo showcases:
+
+- ✅ **Modular Component Architecture**: Clean separation of concerns with reusable components
+- ✅ **Toolbar Integration**: Complete formatting toolbar with title functionality
+- ✅ **Real-time Preview**: Live HTML rendering with tooltip support
+- ✅ **Auto-focus Modal**: Enhanced UX with automatic input focus
+- ✅ **Responsive Design**: Works on all screen sizes
+- ✅ **TypeScript Support**: Full type safety throughout
+
+### Demo Structure
+
+```
+demo/src/
+├── App.jsx                    # Main application component
+├── App.css                    # Styles for all components
+└── components/
+    ├── Toolbar.jsx           # Toolbar with formatting buttons
+    ├── EditorContainer.jsx   # Editor wrapper component
+    ├── RenderedHtmlContainer.jsx # Rendered HTML display
+    ├── Button.jsx            # Reusable button component
+    └── TooltipManager.js     # Tooltip management utility
+```
 
 ## Contributing
 
