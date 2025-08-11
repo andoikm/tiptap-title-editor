@@ -120,3 +120,7 @@ You can customize the demo by:
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+
+## License
+
+This demo is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
