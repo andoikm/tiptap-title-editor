@@ -56,6 +56,7 @@ class TitleModalManager {
         this.inputElement.type = 'text';
         this.inputElement.name = 'title';
         this.inputElement.placeholder = 'Enter title...';
+        this.inputElement.autofocus = true;
         this.inputElement.style.cssText = `
       width: 100%;
       padding: 8px;
@@ -129,6 +130,12 @@ class TitleModalManager {
             }
         });
 
+        // Ensure focus is maintained when modal opens
+        this.inputElement.addEventListener('focus', () => {
+            // Ensure the input is visible and accessible
+            this.inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
         // Add to document
         document.body.appendChild(this.modalElement);
     }
@@ -152,7 +159,21 @@ class TitleModalManager {
 
         // Show modal
         this.modalElement.style.display = 'flex';
-        this.inputElement.focus();
+        
+        // Ensure autofocus works reliably with multiple approaches
+        setTimeout(() => {
+            // Try multiple focus methods for better compatibility
+            this.inputElement.focus();
+            this.inputElement.click();
+            
+            // Select all text if editing existing title
+            if (isEditingExistingTitle && title) {
+                this.inputElement.select();
+            }
+            
+            // Ensure the input is visible
+            this.inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 10);
     }
 
     closeModal() {
