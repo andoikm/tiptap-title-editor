@@ -1,3 +1,4 @@
+import './TitleModalManager.js';
 export { TitleMark } from './TitleMark';
 export type { TitleMarkOptions } from './TitleMark';
 export { TooltipManager } from './tooltipManager';

@@ -1,6 +1,7 @@
 import { Mark } from '@tiptap/core';
 export interface TitleMarkOptions {
     HTMLAttributes?: Record<string, any>;
+    onSave?: (title: string) => void;
 }
 declare module '@tiptap/core' {
     interface Commands<ReturnType> {
@@ -21,6 +22,14 @@ declare module '@tiptap/core' {
              * Unset a title mark
              */
             unsetTitle: () => ReturnType;
+            /**
+             * Toggle title modal and handle title editing
+             */
+            toggleTitleModal: () => ReturnType;
+            /**
+             * Save title from modal
+             */
+            saveTitle: (title: string) => ReturnType;
         };
     }
 }

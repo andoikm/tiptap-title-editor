@@ -1,3 +1,6 @@
+// Import modal manager to ensure it's initialized
+import './TitleModalManager.js';
+
 export { TitleMark } from './TitleMark';
 export type { TitleMarkOptions } from './TitleMark';
 export { TooltipManager } from './tooltipManager';

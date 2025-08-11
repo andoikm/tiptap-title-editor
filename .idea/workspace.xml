@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Add demo deployment script and GitHub Actions workflow">
+    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Remove `TitleButton` component; integrate title functionality directly into `Toolbar`">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/components/TitleButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/components/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/TitleMark.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/TitleMark.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/TitleMark.d.ts.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/TitleMark.d.ts.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.d.ts.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.esm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TitleMark.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/TitleMark.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +163,7 @@
       <workItem from="1754511696154" duration="13892000" />
       <workItem from="1754545283996" duration="1706000" />
       <workItem from="1754549744798" duration="6411000" />
-      <workItem from="1754925924347" duration="644000" />
+      <workItem from="1754925924347" duration="5709000" />
     </task>
     <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
       <option name="closed" value="true" />
@@ -281,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754545536660</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Remove `TitleButton` component; integrate title functionality directly into `Toolbar`">
+      <option name="closed" value="true" />
+      <created>1754926693212</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1754926693212</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +331,7 @@
     <MESSAGE value="rm node modules" />
     <MESSAGE value="Bump version to `1.0.2-beta.1` and update description to reflect bug fixes and improvements" />
     <MESSAGE value="Add demo deployment script and GitHub Actions workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add demo deployment script and GitHub Actions workflow" />
+    <MESSAGE value="Remove `TitleButton` component; integrate title functionality directly into `Toolbar`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove `TitleButton` component; integrate title functionality directly into `Toolbar`" />
   </component>
 </project>
