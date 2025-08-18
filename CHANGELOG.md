@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2024-08-11
+
+### Changed
+- **Production Ready**: Package is now officially production-ready
+- **Documentation**: Removed development warning from README
+- **Version**: Bumped to stable version 1.1.0
+
 ## [1.0.6] - 2024-08-11
 
 ### Added
@@ -15,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Comprehensive Documentation**: Updated README files with current features and architecture
 - **License Compliance**: Added proper LICENSE files and ACKNOWLEDGMENTS.md
 - **Component Breakdown**: Split monolithic App.jsx into focused, reusable components
+- **Production Ready**: Removed development warning, package is now production-ready
 
 ### Changed
 - **Demo Structure**: Reorganized demo into modular components (Toolbar, EditorContainer, RenderedHtmlContainer)
@@ -27,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Import Paths**: Corrected CSS import paths in components
 - **License Attribution**: Fixed copyright holder information in LICENSE files
 - **Package Files**: Added LICENSE and ACKNOWLEDGMENTS.md to npm package
+- **GitHub Pages**: Updated live demo with latest features and improvements
 
 ### Technical Improvements
 - **Performance**: CSS classes instead of inline styles
@@ -34,6 +43,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Reusability**: Modular component architecture
 - **Type Safety**: Full TypeScript support throughout
 - **Accessibility**: Enhanced focus management and keyboard navigation
+
+### Deployment
+- **NPM Package**: Successfully published version 1.0.6 to npm registry
+- **GitHub Pages**: Live demo updated with all latest features
+- **Documentation**: Complete documentation coverage with examples
 
 ## [1.0.5] - Previous Release
 
