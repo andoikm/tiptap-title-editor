@@ -1,6 +1,6 @@
 # Tiptap TitleMark Plugin Demo
 
-This is a demo application showing how to use the `tiptap-titlemark-plugin` in a React + Tiptap setup with a modern, modular architecture.
+This is a demo application showing how to use the `tiptap-titlemark-plugin` (v1.1.0) in a React + Tiptap setup with a modern, modular architecture.
 
 ## Features Demonstrated
 
@@ -12,6 +12,7 @@ This is a demo application showing how to use the `tiptap-titlemark-plugin` in a
 - ✅ **Responsive Design**: Works seamlessly on all screen sizes
 - ✅ **TypeScript Support**: Full type safety throughout the application
 - ✅ **CSS Separation**: Organized styles for better maintainability
+- ✅ **Production Ready**: Stable version 1.1.0 with no breaking changes
 
 ## Getting Started
 

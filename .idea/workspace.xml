@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Bump version to 1.1.0 and update CHANGELOG for production readiness">
+      <change beforePath="$PROJECT_DIR$/demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +150,7 @@
       <workItem from="1754545283996" duration="1706000" />
       <workItem from="1754549744798" duration="6411000" />
       <workItem from="1754925924347" duration="7660000" />
+      <workItem from="1755544172414" duration="442000" />
     </task>
     <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
       <option name="closed" value="true" />
@@ -335,7 +336,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754943130912</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update CHANGELOG and workspace.xml: add beta release note and adjust task summaries">
+      <option name="closed" value="true" />
+      <created>1755544244094</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1755544244094</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Bump version to 1.1.0 and update CHANGELOG for production readiness">
+      <option name="closed" value="true" />
+      <created>1755544388420</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1755544388420</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +388,8 @@
     <MESSAGE value="Update README: enhance demo features and modular architecture; add auto-focus modal for improved UX" />
     <MESSAGE value="Update LICENSE and package.json: change copyright holder and add license field" />
     <MESSAGE value="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files" />
+    <MESSAGE value="Update CHANGELOG and workspace.xml: add beta release note and adjust task summaries" />
+    <MESSAGE value="Bump version to 1.1.0 and update CHANGELOG for production readiness" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bump version to 1.1.0 and update CHANGELOG for production readiness" />
   </component>
 </project>
