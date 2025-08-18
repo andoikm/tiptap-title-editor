@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Enhance TitleModalManager: add autofocus and focus handling for improved user experience">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/README.md" afterDir="false" />
+    <list default="true" id="a8b34d8a-5bff-427e-badc-5a9c909c7648" name="Changes" comment="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,7 @@
       <workItem from="1754511696154" duration="13892000" />
       <workItem from="1754545283996" duration="1706000" />
       <workItem from="1754549744798" duration="6411000" />
-      <workItem from="1754925924347" duration="6101000" />
+      <workItem from="1754925924347" duration="7660000" />
     </task>
     <task id="LOCAL-00001" summary="Add eslint and prettier integration for code linting and formatting">
       <option name="closed" value="true" />
@@ -312,7 +311,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754940613736</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update README: enhance demo features and modular architecture; add auto-focus modal for improved UX">
+      <option name="closed" value="true" />
+      <created>1754940778833</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1754940778833</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Update LICENSE and package.json: change copyright holder and add license field">
+      <option name="closed" value="true" />
+      <created>1754940845857</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1754940845857</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files">
+      <option name="closed" value="true" />
+      <created>1754943130912</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1754943130912</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +368,9 @@
     <MESSAGE value="Remove `TitleButton` component; integrate title functionality directly into `Toolbar`" />
     <MESSAGE value="Add TitleModalManager for title editing; update TitleMark options and integrate into editor" />
     <MESSAGE value="Enhance TitleModalManager: add autofocus and focus handling for improved user experience" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhance TitleModalManager: add autofocus and focus handling for improved user experience" />
+    <MESSAGE value="Update README: enhance demo features and modular architecture; add auto-focus modal for improved UX" />
+    <MESSAGE value="Update LICENSE and package.json: change copyright holder and add license field" />
+    <MESSAGE value="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ACKNOWLEDGMENTS.md, CHANGELOG.md, and LICENSE files; update package.json to include new files" />
   </component>
 </project>
